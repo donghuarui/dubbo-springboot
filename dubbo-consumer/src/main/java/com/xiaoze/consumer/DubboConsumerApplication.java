@@ -7,10 +7,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * DubboConsumerApplication
  * 消费者启动类
+ *
  * @author xiaoze
  * @date 2018/6/7
  */
-@EnableDubbo
+@EnableDubbo(scanBasePackages = "com.xiaoze.consumer.controller")
 @SpringBootApplication
 public class DubboConsumerApplication {
 

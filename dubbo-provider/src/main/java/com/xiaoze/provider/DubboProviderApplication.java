@@ -1,16 +1,19 @@
 package com.xiaoze.provider;
 
 import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * DubboProviderApplication
  * 服务提供启动类
+ *
  * @author xiaoze
  * @date 2018/6/7
  */
-@EnableDubbo
+@EnableDubbo(scanBasePackages = "com.xiaoze.provider.service.impl")
+@MapperScan("com.xiaoze.provider.mapper")//告诉mapper所在的包名
 @SpringBootApplication
 public class DubboProviderApplication {
 
